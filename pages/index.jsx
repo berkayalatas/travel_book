@@ -4,8 +4,8 @@ import Banner from "../components/banner/Banner.jsx";
 import LocationCards from "../components/locationCards/LocationCards";
 import PlaceCards from "../components/placeCards/PlaceCards.jsx";
 import React from "react";
-import BigCard from "../components/bigCard/BigCard"
-import Footer from '../components/footer/Footer'
+import BigCard from "../components/bigCard/BigCard";
+import Footer from "../components/footer/Footer";
 
 export default function Home({ citiesData, cardsData }) {
   const ref = React.useRef(null);
@@ -95,12 +95,12 @@ export default function Home({ citiesData, cardsData }) {
           </div>
         </section>
 
-          <BigCard 
-            img="https://links.papareact.com/4cj"
-            title="Greatest Outdoors"
-            description="Wishlist curated"
-            textButton = "Get Inspired"
-          />
+        <BigCard
+          img="https://links.papareact.com/4cj"
+          title="Greatest Outdoors"
+          description="Wishlist curated"
+          textButton="Get Inspired"
+        />
       </main>
 
       <Footer />
