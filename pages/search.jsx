@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer";
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import HotelCard from "../components/hotelCard/HotelCard";
+import Map from "../components/map/Map";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -44,7 +45,10 @@ function Search({ searchResults }) {
           </div>
           <div className="flex flex-col">
             {searchResults.map(
-              ({ img, location, title, description, star, price, total }, key) => (
+              (
+                { img, location, title, description, star, price, total },
+                key
+              ) => (
                 <HotelCard
                   key={key}
                   img={img}
@@ -58,6 +62,9 @@ function Search({ searchResults }) {
               )
             )}
           </div>
+        </section>
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
       <Footer />
