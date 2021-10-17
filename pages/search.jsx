@@ -12,7 +12,7 @@ function Search({ searchResults }) {
   const { location, startDate, endDate, numberOfGuest } = router.query;
   const formattedStartDate = format(new Date(startDate), "dd-MM-yyyy");
   const formattedEndDate = format(new Date(endDate), "dd-MM-yyyy");
-  const range = `${formattedStartDate} - ${formattedEndDate}`;
+  const range = `from ${formattedStartDate} - to ${formattedEndDate}`;
 
   return (
     <div>
@@ -25,16 +25,16 @@ function Search({ searchResults }) {
       />
       <main className="flex">
         <section>
-          <p className="text-xs m-3">
+          <p className="text-xs m-3 pl-2">
             200+, {range}, Stays for {numberOfGuest}{" "}
             {numberOfGuest > 1 ? "Guests" : "Guest"}
           </p>
-          <h1 className="text-3xl font-semibold mt-2 mb-6">
+          <h1 className="text-3xl font-semibold mt-2 mb-6 pl-2">
             {" "}
             Stays in {location.charAt(0).toUpperCase() + location.slice(1)}
           </h1>
           <div
-            className="hidden lg:inline-flex mb-5 space-x-3 
+            className="hidden lg:inline-flex pl-2 mb-5 space-x-3 
           text-gray-700 whitespace-nowrap"
           >
             <button className="button">Cancelation Flexibility</button>
@@ -44,8 +44,9 @@ function Search({ searchResults }) {
           </div>
           <div className="flex flex-col">
             {searchResults.map(
-              ({ img, location, title, description, star, price, total }) => (
+              ({ img, location, title, description, star, price, total }, key) => (
                 <HotelCard
+                  key={key}
                   img={img}
                   location={location}
                   title={title}
