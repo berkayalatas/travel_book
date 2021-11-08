@@ -6,11 +6,14 @@ import {
   UsersIcon,
   UserCircleIcon,
 } from "@heroicons/react/solid";
-import React from "react";
+import React, { useState } from "react";
 import "react-date-range/dist/styles.css"; // main style file for date picker
 import "react-date-range/dist/theme/default.css"; // theme css file date picker
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
+import { useAuth } from "../../contexts/AuthContext";
+import logo from '../../public/images/logo.PNG';
 
 function Header({ placeholder }) {
   const [searchInput, setSearchInput] = React.useState("");
@@ -18,6 +21,7 @@ function Header({ placeholder }) {
   const [endDate, setEndDate] = React.useState(new Date());
   const [numberOfGuest, setNumberOfGuest] = React.useState(1);
   const router = useRouter();
+  const { currentUser, logout } = useAuth();
 
   const handleDatePicker = (ranges) => {
     setStartDate(ranges.selection.startDate);
@@ -27,6 +31,20 @@ function Header({ placeholder }) {
   const resetSearchInput = () => {
     setSearchInput("");
   };
+
+  const [active, setActive] = useState(false);
+
+  const handleNavClick = () => {
+    setActive(!active);
+  };
+
+  async function handleLogout() {
+    try {
+      await logout();
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const search = () => {
     router.push({
@@ -49,14 +67,14 @@ function Header({ placeholder }) {
   return (
     <header
       className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md 
-      p-5 md:px-10"
+      p-4 md:px-10"
     >
       <div
-        className="relative flex items-center h-7 md:h-10 cursor-pointer my-auto"
+        className="relative flex items-center h-7 md:h-12 cursor-pointer my-auto"
         onClick={() => router.push("/")}
       >
         <Image
-          src={"https://links.papareact.com/qd3"}
+          src={logo}
           alt="logo"
           layout="fill"
           objectFit="contain"
@@ -73,16 +91,60 @@ function Header({ placeholder }) {
           className="flex-grow md:pl-5 bg-transparent outline-none text-gray-600 placeholder-gray-400"
           placeholder={placeholder || "Where are you going?"}
         />
-        <SearchIcon className="h-8 hidden lg:inline-flex bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
+        <SearchIcon
+          onClick={search}
+          className="h-8 hidden lg:inline-flex bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2"
+        />
       </div>
 
       <div className="flex items-center justify-end text-gray-500 space-x-4">
         <p className="hidden lg:inline cursor-pointer">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer hidden lg:inline" />
 
-        <div className="flex items-center space-x-2 border-2 px-1 py-2 md:px-2 rounded-full">
+        <div
+          className={`flex items-center space-x-2 border-2 px-1 py-2 md:px-2 rounded-full cursor-pointer`}
+          onClick={handleNavClick}
+        >
           <MenuIcon className="h-4 lg:h-6" />
-          <UserCircleIcon className="h-5 lg:h-6" />
+          <UserCircleIcon className="h-5 lg:h-7 text-red-400" />
+          <div
+            className={`${
+              active ? "" : "hidden"
+            } origin-top-right absolute right-0 mt-52 w-56 rounded-md shadow-lg 
+            bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
+          >
+            {currentUser ? (
+              <div className="p-1">
+                <Link className="navItem" href="/auth/UserDashboard">
+                  <div className="navItem">User Dashboard</div>
+                </Link>
+
+                <Link href="/auth/UpdateProfile">
+                  <div className="navItem">Update Profile</div>
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+                >
+                  <div>Sign out</div>
+                </button>
+              </div>
+            ) : (
+              <div className="p-1">
+                <Link className="navItem" href="/auth/LoginPage">
+                  <div className="navItem">Login</div>
+                </Link>
+
+                <Link href="/auth/SignUpPage">
+                  <div className="navItem">Sign up</div>
+                </Link>
+
+                <Link href="#" className="navItem">
+                  <div className="navItem">License</div>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       {searchInput && (

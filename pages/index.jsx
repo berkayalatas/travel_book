@@ -16,7 +16,7 @@ export default function Home({ citiesData, cardsData }) {
     <div>
       <Head>
         <title> Travel Book </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./images/small_logo.PNG" />
       </Head>
 
       <Header />
@@ -48,7 +48,7 @@ export default function Home({ citiesData, cardsData }) {
           <div className="flex justify-evenly">
             <button
               className="cursor-pointer z-10 hover:shadow-lg"
-              onClick={() => scroll(-100)}
+              onClick={() => scroll(-200)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export default function Home({ citiesData, cardsData }) {
             </button>
             <button
               className="z-10 cursor-pointer px-3 hover:shadow-lg"
-              onClick={() => scroll(100)}
+              onClick={() => scroll(200)}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

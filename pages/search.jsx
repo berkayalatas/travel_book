@@ -20,18 +20,15 @@ function Search({ searchResults }) {
       <Header
         placeholder={`${
           location.charAt(0).toUpperCase() + location.slice(1)
-        } | ${range} | ${numberOfGuest} ${
-          numberOfGuest > 1 ? "Guests" : "Guest"
-        }`}
+        }  `}
       />
       <main className="flex">
         <section>
-          <p className="text-xs m-3 pl-2">
+          <p className="text-sm m-3 pl-2">
             200+, {range}, Stays for {numberOfGuest}{" "}
             {numberOfGuest > 1 ? "Guests" : "Guest"}
           </p>
-          <h1 className="text-3xl font-semibold mt-2 mb-6 pl-2">
-            {" "}
+          <h1 className="text-3xl font-semibold mt-2 mb-6 md:pl-5">
             Stays in {location.charAt(0).toUpperCase() + location.slice(1)}
           </h1>
           <div

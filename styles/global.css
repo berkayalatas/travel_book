@@ -6,4 +6,7 @@
         cursor-pointer hover:shadow-lg active:scale-95 
         active:bg-gray-100 transition transform duration-100 ease-out;
     }
+    .navItem {
+        @apply text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100;
+    }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import { getCenter } from 'geolib';
+import { getCenter } from "geolib";
+import MapCard from "./MapCard";
 
 function Map({ searchResults }) {
   const [selectedPin, setSelectedPin] = React.useState({});
@@ -61,7 +62,14 @@ function Map({ searchResults }) {
               latitude={marker.lat}
               longitude={marker.long}
             >
-              {marker.title}
+              <MapCard 
+                img= { marker.img }
+                location={marker.location}
+                title={marker.title}
+                description={marker.description}
+                price={marker.price}
+                
+              />
             </Popup>
           ) : (
             false

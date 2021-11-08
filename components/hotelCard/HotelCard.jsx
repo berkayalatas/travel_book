@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
+import React from "react";
 
 function HotelCard({ img, location, title, description, star, price, total }) {
+  const [toggleHeart, setToggleHeart] = React.useState(true);
   return (
     <div
       className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-90
@@ -21,7 +23,15 @@ function HotelCard({ img, location, title, description, star, price, total }) {
       <div className="flex flex-col flex-grow pl-5">
         <div className="flex justify-between">
           <p> {location} </p>
-          <HeartIcon className="h-7 cursor-pointer" />
+          <HeartIcon
+            className="h-7 cursor-pointer"
+            onClick={(e) => {
+              toggleHeart
+                ? (e.target.style.color = "red")
+                : (e.target.style.color = "black");
+              setToggleHeart(!toggleHeart);
+            }}
+          />
         </div>
 
         <h4 className="text-xl">{title}</h4>
