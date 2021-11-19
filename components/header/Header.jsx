@@ -13,7 +13,7 @@ import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import { useAuth } from "../../contexts/AuthContext";
-import logo from '../../public/images/logo.PNG';
+import logo from "../../public/images/logo.PNG";
 
 function Header({ placeholder }) {
   const [searchInput, setSearchInput] = React.useState("");
@@ -66,8 +66,8 @@ function Header({ placeholder }) {
 
   return (
     <header
-      className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md 
-      p-4 md:px-10"
+      className="sticky top-0 z-50 flex md:grid md:grid-cols-3 bg-white shadow-md 
+      p-4 md:px-10 justify-between "
     >
       <div
         className="relative flex items-center h-7 md:h-12 cursor-pointer my-auto"
@@ -76,33 +76,37 @@ function Header({ placeholder }) {
         <Image
           src={logo}
           alt="logo"
-          layout="fill"
+          width={200}
+          height={90}
           objectFit="contain"
           objectPosition="left"
         />
         {/* <img src="https://img.icons8.com/color/48/000000/palm-tree.png" />*/}
       </div>
 
-      <div className="flex items-center md:border-2 md:inline-flex rounded-full py-2 md:shadow-sm">
+      <div
+        className="flex items-center ml-2 sm:border-2 md:inline-flex 
+                      rounded-full py-2 md:shadow-sm"
+      >
         <input
           value={searchInput}
           onChange={(event) => setSearchInput(event.target.value)}
           type="text"
-          className="flex-grow md:pl-5 bg-transparent outline-none text-gray-600 placeholder-gray-400"
-          placeholder={placeholder || "Where are you going?"}
+          className="flex-grow md:pl-5 ml-2 p w-full border-2 p-1 sm:border-none rounded-full bg-transparent outline-none
+                     text-gray-600 placeholder-gray-500 "
+          placeholder={placeholder || "Seach City"}
         />
         <SearchIcon
           onClick={search}
           className="h-8 hidden lg:inline-flex bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2"
         />
       </div>
-
       <div className="flex items-center justify-end text-gray-500 space-x-4">
         <p className="hidden lg:inline cursor-pointer">Become a host</p>
         <GlobeAltIcon className="h-6 cursor-pointer hidden lg:inline" />
 
         <div
-          className={`flex items-center space-x-2 border-2 px-1 py-2 md:px-2 rounded-full cursor-pointer`}
+          className={`flex items-center space-x-3 border-2 px-1 py-2 md:px-2 rounded-full cursor-pointer`}
           onClick={handleNavClick}
         >
           <MenuIcon className="h-4 lg:h-6" />
@@ -110,7 +114,7 @@ function Header({ placeholder }) {
           <div
             className={`${
               active ? "" : "hidden"
-            } origin-top-right absolute right-0 mt-52 w-56 rounded-md shadow-lg 
+            } origin-top-right absolute right-5 top-16 w-36 rounded-md shadow-lg 
             bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
           >
             {currentUser ? (

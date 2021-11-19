@@ -81,20 +81,7 @@ function SignUpPage() {
             </h2>
             <div className="mt-8">
               <form onSubmit={handleSubmit}>
-                <div>
-                  <div className="text-sm font-bold text-gray-700 tracking-wide">
-                    Username
-                  </div>
-                  <input
-                    className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-300"
-                    type="text"
-                    placeholder="Your username*"
-                    ref={usernameRef}
-                    required
-                    minLength="3"
-                    maxLength="20"
-                  />
-                </div>
+        
                 <div className="mt-8">
                   <div className="text-sm font-bold text-gray-700 tracking-wide">
                     Email Address
