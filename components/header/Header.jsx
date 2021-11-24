@@ -47,15 +47,17 @@ function Header({ placeholder }) {
   }
 
   const search = () => {
-    router.push({
-      pathname: "/search",
-      query: {
-        location: searchInput,
-        startDate: startDate.toISOString(),
-        endDate: endDate.toISOString(),
-        numberOfGuest: numberOfGuest,
-      },
-    });
+    if (searchInput.length > 0 && searchInput.charAt(0) != ' ') {
+      router.push({
+        pathname: "/search",
+        query: {
+          location: searchInput,
+          startDate: startDate.toISOString(),
+          endDate: endDate.toISOString(),
+          numberOfGuest: numberOfGuest,
+        },
+      });
+    }
   };
 
   const dateRange = {
@@ -70,8 +72,7 @@ function Header({ placeholder }) {
       p-4 md:px-10 justify-between "
     >
       <div
-        className="relative flex items-center h-7 md:h-12 cursor-pointer my-auto"
-        onClick={() => router.push("/")}
+        className="relative flex items-center h-7 md:h-12 my-auto"       
       >
         <Image
           src={logo}
@@ -80,6 +81,8 @@ function Header({ placeholder }) {
           height={90}
           objectFit="contain"
           objectPosition="left"
+          className="cursor-pointer"
+          onClick={() => router.push("/")}
         />
         {/* <img src="https://img.icons8.com/color/48/000000/palm-tree.png" />*/}
       </div>

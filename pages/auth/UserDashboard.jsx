@@ -2,7 +2,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import PrivateRoute from "../PrivateRoute";
 import Link from "next/link";
 import { auth } from "../../firebase_config";
-import React, { useRef, useState, useEffect } from "react";
+import React, {useState} from "react";
 import { useRouter } from "next/dist/client/router";
 import Header from "../../components/header/Header";
 import SvgComp from "../../components/svg/SvgComp";
@@ -11,9 +11,6 @@ function UserDashboard() {
   const [error, setError] = useState("");
   const { currentUser, logout, user } = useAuth();
   const router = useRouter();
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  //const { login, loginErrMsg } = useAuth();
 
   async function handleLogout() {
     setError("");

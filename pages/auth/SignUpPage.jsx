@@ -6,7 +6,7 @@ import SvgComp from "../../components/svg/SvgComp";
 
 function SignUpPage() {
   const router = useRouter();
-  const usernameRef = useRef();
+  //const usernameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
@@ -72,7 +72,7 @@ function SignUpPage() {
             ""
           )}
 
-          <div className="mt-6 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-2 xl:px-24 xl:max-w-2xl">
+          <div className="mt-6 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-10 xl:px-24 xl:max-w-2xl">
             <h2
               className="text-center text-4xl text-red-400 font-display font-semibold lg:text-left xl:text-4xl
                     xl:text-bold"
@@ -81,7 +81,6 @@ function SignUpPage() {
             </h2>
             <div className="mt-8">
               <form onSubmit={handleSubmit}>
-        
                 <div className="mt-8">
                   <div className="text-sm font-bold text-gray-700 tracking-wide">
                     Email Address

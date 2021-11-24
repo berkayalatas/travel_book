@@ -6,12 +6,20 @@ import PlaceCards from "../components/placeCards/PlaceCards.jsx";
 import React from "react";
 import BigCard from "../components/bigCard/BigCard";
 import Footer from "../components/footer/Footer";
+import london from "../public/images/locations/london.jpg"
+import berlin from "../public/images/locations/berlin.jpg"
+import amsterdam from "../public/images/locations/amsterdam.jpg"
+import vienna from "../public/images/locations/vienna.jpg"
+import rome from "../public/images/locations/rome.jpg"
+import paris from "../public/images/locations/paris.jpg"
 
 export default function Home({ citiesData, cardsData }) {
   const ref = React.useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
+  const imgArr = [london,berlin,vienna,paris,rome,amsterdam];
+
   return (
     <div>
       <Head>
@@ -24,19 +32,19 @@ export default function Home({ citiesData, cardsData }) {
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
-          <h2 className="text-4xl font-semibold pb-5">Exlore Nearby</h2>
+          <h2 className="text-4xl font-semibold pb-5">Exlore Destinations</h2>
           <div
             className="grid grid-cols-1 
             sm:grid-cols-2
-            lg:grid-cols-3
-            xl:grid-cols-4 mb-5"
-          >
+            lg:grid-cols-2
+            xl:grid-cols-3 mb-5"
+          >            
             {/* pull some data from server- API endpoint */}
             {citiesData?.map((item, key) => (
               <LocationCards
                 key={key}
-                img={item.img}
-                distance={item.distance}
+                img={imgArr[key]}
+                country={item.country}
                 location={item.location}
               />
             ))}
@@ -109,7 +117,7 @@ export default function Home({ citiesData, cardsData }) {
 }
 
 export async function getStaticProps() {
-  const citiesData = await fetch("https://jsonkeeper.com/b/4G1G").then(
+  const citiesData = await fetch("https://jsonkeeper.com/b/4VF0").then(
     (response) => response.json()
   );
 

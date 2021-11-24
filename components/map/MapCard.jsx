@@ -42,7 +42,7 @@ function MapCard({ img, location, title, description, price }) {
           style={{ transition: "all .2s ease-out" }}
           className="bg-grey-lighter p-3 flex items-center justify-between transition hover:bg-grey-light"
         >
-          <button class="rounded-lg px-4 py-2 bg-red-400 text-white hover:bg-red-500 duration-300">
+          <button className="rounded-lg px-4 py-2 bg-red-400 text-white hover:bg-red-500 duration-300">
             Book Now
           </button>
         </div>

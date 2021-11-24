@@ -20,10 +20,10 @@ function Search({ searchResults }) {
       <Header
         placeholder={`${
           location.charAt(0).toUpperCase() + location.slice(1)
-        }  `}
+        } `}
       />
-      <main className="flex">
-        <section>
+      <main className="flex flex-col xl:flex-row justify-center align-items-center gap-2  xl:min-h-[100vh]">
+        <section className="flex-col xl:overflow-y-scroll xl:max-h-[100vh]">
           <p className="text-sm m-3 pl-2">
             200+, {range}, Stays for {numberOfGuest}{" "}
             {numberOfGuest > 1 ? "Guests" : "Guest"}
@@ -60,7 +60,7 @@ function Search({ searchResults }) {
             )}
           </div>
         </section>
-        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+        <section className="flex flex-wrap justify-center xl:min-w-[600px]">
           <Map searchResults={searchResults} />
         </section>
       </main>
