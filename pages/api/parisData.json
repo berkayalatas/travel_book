@@ -1,0 +1,71 @@
+[{
+    "img": "https://images.unsplash.com/photo-1556784344-ad913c73cfc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+    "img2" : "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Brand new studio flat",
+    "title": "20 min to Louvre museum",
+    "description": "1 guest · 2 bedroom · 2 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 3.7,
+    "price": "$80 / night",
+    "long": 2.339234,
+    "lat": 48.853161
+}, {
+    "img": "https://images.unsplash.com/photo-1541123603104-512919d6a96c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Private room in center of Paris",
+    "title": "Independent luxury studio apartment",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen",
+    "star": 4.8,
+    "price": "$40 / night",
+    "long": 2.353445,
+    "lat":48.846530
+}, {
+    "img": "https://images.unsplash.com/photo-1560448205-17d3a46c84de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+    "location": "Single room center of Paris",
+    "title": "Paris Studio Apartment, 10 min to airport",
+    "description": "1 guest · 2 bedroom · 2 bed · 2 bathrooms · Free parking · Washing Machine",
+    "star": 4.9,
+    "price": "$45 / night",
+    "long": 2.365859,
+    "lat": 48.856245
+}, {
+    "img": "https://images.unsplash.com/photo-1603872921241-a9663383fa15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1189&q=80",
+    "img2": "https://images.unsplash.com/photo-1560184897-502a475f7a0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Dream view flat",
+    "title": "30 mins to Eiffel Tower, France, Paris",
+    "description": "1 guest · 1 bedroom · 1 bed · 1 shared bathrooms ·No Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 3.1,
+    "price": "$35 / night",
+    "long": 2.335666,
+    "lat": 48.856245
+}, {
+    "img": "https://images.unsplash.com/photo-1617228133035-2347f159e755?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Great and cozy room near Park",
+    "title": "Peaceful Modern Bedroom and feel the silent",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · No parking · Dry Cleaning",
+    "star": 5.0,
+    "price": "$50 / night",
+    "long": 2.325360,
+    "lat": 48.866070
+}, {
+    "img": "https://images.unsplash.com/photo-1582417728413-b2347161b864?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "img2": "https://images.unsplash.com/flagged/photo-1573168710465-7f7da9a23a15?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Clean, Quiet and lovely room",
+    "title": "The Perfect Room In Paris near hospital",
+    "description": "2 guest · 1 bedroom · 1 bed  · Wifi · Washing Machine",
+    "star": 4.2,
+    "price": "$85 / night",
+    "long": 2.317377,
+    "lat":48.842689
+}, {
+    "img": "https://images.unsplash.com/photo-1494203484021-3c454daf695d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1583953458882-302655b5c376?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "location": "Center of Paris and feel free to explore everywhere",
+    "title": "5 Star Luxury Apartment",
+    "description": "2 guest · 1 bedroom · 1 bed · 1 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.8,
+    "price": "$70 / night",
+    "long": 2.354137,
+    "lat": 48.840317
+}]

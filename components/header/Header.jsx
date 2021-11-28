@@ -20,6 +20,7 @@ function Header({ placeholder }) {
   const [startDate, setStartDate] = React.useState(new Date());
   const [endDate, setEndDate] = React.useState(new Date());
   const [numberOfGuest, setNumberOfGuest] = React.useState(1);
+
   const router = useRouter();
   const { currentUser, logout } = useAuth();
 
@@ -47,16 +48,28 @@ function Header({ placeholder }) {
   }
 
   const search = () => {
-    if (searchInput.length > 0 && searchInput.charAt(0) != ' ') {
-      router.push({
-        pathname: "/search",
-        query: {
-          location: searchInput,
-          startDate: startDate.toISOString(),
-          endDate: endDate.toISOString(),
-          numberOfGuest: numberOfGuest,
-        },
-      });
+ 
+    if (searchInput.length > 2 && searchInput.charAt(0) != " ") {
+      if (
+        searchInput.toLowerCase() === "london" ||
+        searchInput.toLowerCase() === "berlin" ||
+        searchInput.toLowerCase() === "vienna" ||
+        searchInput.toLowerCase() === "paris" ||
+        searchInput.toLowerCase() === "rome" ||
+        searchInput.toLowerCase() === "amsterdam"
+      ) {
+        router.push({
+          pathname: "/search",
+          query: {
+            location: searchInput,
+            startDate: startDate.toISOString(),
+            endDate: endDate.toISOString(),
+            numberOfGuest: numberOfGuest,
+          },
+        });        
+      }else {
+        router.push("/NotFound")
+      }
     }
   };
 
@@ -71,9 +84,7 @@ function Header({ placeholder }) {
       className="sticky top-0 z-50 flex md:grid md:grid-cols-3 bg-white shadow-md 
       p-4 md:px-10 justify-between "
     >
-      <div
-        className="relative flex items-center h-7 md:h-12 my-auto"       
-      >
+      <div className="relative flex items-center h-7 md:h-12 my-auto">
         <Image
           src={logo}
           alt="logo"

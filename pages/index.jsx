@@ -2,23 +2,24 @@ import Head from "next/head";
 import Header from "../components/header/Header.jsx";
 import Banner from "../components/banner/Banner.jsx";
 import LocationCards from "../components/locationCards/LocationCards";
-import PlaceCards from "../components/placeCards/PlaceCards.jsx";
+import PopularRooms from "../components/popularRooms/PopularRooms.jsx";
 import React from "react";
-import BigCard from "../components/bigCard/BigCard";
+import About from "../components/about/About";
 import Footer from "../components/footer/Footer";
-import london from "../public/images/locations/london.jpg"
-import berlin from "../public/images/locations/berlin.jpg"
-import amsterdam from "../public/images/locations/amsterdam.jpg"
-import vienna from "../public/images/locations/vienna.jpg"
-import rome from "../public/images/locations/rome.jpg"
-import paris from "../public/images/locations/paris.jpg"
+import london from "../public/images/locations/london.jpg";
+import berlin from "../public/images/locations/berlin.jpg";
+import amsterdam from "../public/images/locations/amsterdam.jpg";
+import vienna from "../public/images/locations/vienna.jpg";
+import rome from "../public/images/locations/rome.jpg";
+import paris from "../public/images/locations/paris.jpg";
 
 export default function Home({ citiesData, cardsData }) {
   const ref = React.useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
-  const imgArr = [london,berlin,vienna,paris,rome,amsterdam];
+  const imgArr = [london, berlin, vienna, paris, rome, amsterdam];
+  //console.log(citiesData, cardsData);
 
   return (
     <div>
@@ -31,14 +32,17 @@ export default function Home({ citiesData, cardsData }) {
       <Banner />
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
+        <About />
         <section className="pt-6">
-          <h2 className="text-4xl font-semibold pb-5">Exlore Destinations</h2>
+          <h2 className="w-full my-2 text-4xl lg:text-5xl font-black leading-tight text-center text-gray-800">
+            Exlore Destinations
+          </h2>
           <div
             className="grid grid-cols-1 
             sm:grid-cols-2
             lg:grid-cols-2
             xl:grid-cols-3 mb-5"
-          >            
+          >
             {/* pull some data from server- API endpoint */}
             {citiesData?.map((item, key) => (
               <LocationCards
@@ -52,7 +56,7 @@ export default function Home({ citiesData, cardsData }) {
         </section>
 
         <section>
-          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+          <h2 className="w-full my-5 text-4xl lg:text-5xl font-black leading-tight text-center text-gray-800">Popular Rooms</h2>
           <div className="flex justify-evenly">
             <button
               className="cursor-pointer z-10 hover:shadow-lg"
@@ -98,17 +102,10 @@ export default function Home({ citiesData, cardsData }) {
             }}
           >
             {cardsData?.map((item, key) => (
-              <PlaceCards key={key} img={item.img} title={item.title} />
+              <PopularRooms key={key} img={item.img} title={item.title} />
             ))}
           </div>
         </section>
-
-        <BigCard
-          img="https://links.papareact.com/4cj"
-          title="Greatest Outdoors"
-          description="Wishlist curated"
-          textButton="Get Inspired"
-        />
       </main>
 
       <Footer />

@@ -1,0 +1,71 @@
+[{
+    "img": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2" : "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Brand new studio flat",
+    "title": "Stay at this spacious Alexanderplatz",
+    "description": "1 guest · 2 bedroom · 2 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 3.7,
+    "price": "$80 / night",
+    "long": 13.392808,
+    "lat": 52.523898
+}, {
+    "img": "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
+    "img2": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Private room in center of Berlin",
+    "title": "Independent luxury studio apartment",
+    "description": "2 guest · 3 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen",
+    "star": 4.8,
+    "price": "$40 / night",
+    "long": 13.406464,
+    "lat":52.521130
+}, {
+    "img": "https://images.unsplash.com/photo-1542889601-399c4f3a8402?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1519643225200-94e79e383724?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+    "location": "Single center of Berlin",
+    "title": "Berlin Studio Apartment in Friedrichshain",
+    "description": "4 guest · 4 bedroom · 4 bed · 2 bathrooms · Free parking · Washing Machine",
+    "star": 4.9,
+    "price": "$45 / night",
+    "long": 13.446893,
+    "lat": 52.512669
+}, {
+    "img": "https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
+    "location": "Dream view flat",
+    "title": "30 mins to Bradenburger Tor, Excel Berlin",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms ·No Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 3.1,
+    "price": "$35 / night",
+    "long": 13.397422,
+    "lat": 52.513191
+}, {
+    "img": "https://images.unsplash.com/photo-1547166812-0fca6370dc03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1603801705819-e3b27f8bb8cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Great and cozy room",
+    "title": "Spacious Peaceful Modern Bedroom",
+    "description": "3 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Free parking · Dry Cleaning",
+    "star": 5.0,
+    "price": "$50 / night",
+    "long": 13.392121,
+    "lat": 52.521339
+}, {
+    "img": "https://images.unsplash.com/photo-1606654810659-8d4282752758?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1541194577687-8c63bf9e7ee3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+    "location": "Clean, Quiet and lovely room",
+    "title": "The Perfect Room In Berlin",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Washing Machine",
+    "star": 4.2,
+    "price": "$85 / night",
+    "long": 13.407924,
+    "lat":52.524734
+}, {
+    "img": "https://images.unsplash.com/photo-1592247350271-c5efb34dd967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1600494448868-9fbd1ac2d9f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "location": "Center of Berlin, 10 min to Charlie Checkpoint",
+    "title": "5 Star Luxury Apartment",
+    "description": "3 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.8,
+    "price": "$70 / night",
+    "long": 13.405691,
+    "lat": 52.520817
+}]

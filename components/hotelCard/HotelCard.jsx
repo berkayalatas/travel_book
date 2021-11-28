@@ -3,7 +3,7 @@ import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
 import React from "react";
 
-function HotelCard({ img, location, title, description, star, price, total }) {
+function HotelCard({ img, location, title, description, star, price }) {
   
   const [toggleHeart, setToggleHeart] = React.useState(true);
   return (
@@ -48,7 +48,7 @@ function HotelCard({ img, location, title, description, star, price, total }) {
           </p>
           <div>
             <p className="text-lg font-semibold pb-2 lg:text-2xl">{price}</p>
-            <p className="text-right font-extralight">{total}</p>
+            {/* <p className="text-right font-extralight">{total}</p> */}
           </div>
         </div>
       </div>

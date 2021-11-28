@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css'
 import '../styles/global.css'
+import '../styles/bigCard.css'
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from 'next/router';
 import { AuthProvider } from "../contexts/AuthContext";

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-function PlaceCards({ img, title }) {
+function PopularRooms({ img, title }) {
 
   return (  
-    <div>
+    <div className="pb-12">
       <div
         className="relative h-80 w-80 cursor-pointer hover:scale-105
         transform transition duration-300 ease-out"
@@ -19,4 +19,5 @@ function PlaceCards({ img, title }) {
   );
 }
 
-export default PlaceCards;
+export default PopularRooms;
+ 

@@ -1,0 +1,71 @@
+[{
+    "img": "https://images.unsplash.com/photo-1560185009-5bf9f2849488?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2" : "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "location": "Luxury studio flat",
+    "title": "Stay at this room and see Karlskirche view",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.73,
+    "price": "$40 / night",
+    "long": 16.364702,
+    "lat": 48.211977
+}, {
+    "img": "https://images.unsplash.com/photo-1608551283100-6837375103ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Private room in center of Vienna",
+    "title": "Independent luxury studio apartment",
+    "description": "2 guest · 3 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen",
+    "star": 4.3,
+    "price": "$35 / night",
+    "long": 16.372518,
+    "lat": 48.209037
+}, {
+    "img": "https://images.unsplash.com/photo-1606654810639-76ed5d12737b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Single and chick room in center of Vienna",
+    "title": "Vienna Studio Apartment",
+    "description": "1 guest · 4 bedroom · 4 bed · 2 bathrooms · No parking · Washing Machine",
+    "star": 3.9,
+    "price": "$40 / night",
+    "long": 16.375266,
+    "lat": 48.205548
+}, {
+    "img": "https://images.unsplash.com/photo-1581467695675-7e3753e5ab26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
+    "img2": "https://images.unsplash.com/photo-1588865768606-430caafbe707?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Amazing view flat",
+    "title": "30 mins to Dannebergplatz, Autria Vienna",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.1,
+    "price": "$80 / night",
+    "long": 16.360751,
+    "lat":48.205319
+}, {
+    "img": "https://images.unsplash.com/photo-1613575831056-0acd5da8f085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1536627792483-9300ee53afdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
+    "location": "Great and cozy room and quiet Apartment",
+    "title": "Spacious Peaceful Modern Bedroom",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Free parking · Dry Cleaning",
+    "star": 5.0,
+    "price": "$30 / night",
+    "long": 16.387978,
+    "lat": 48.211496
+}, {
+    "img": "https://images.unsplash.com/photo-1610123172705-a57f116cd4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1584107025504-6279fef74f34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Clean, Quiet and lovely room",
+    "title": "The Perfect Room In Vienna",
+    "description": "2 guest · 1 bedroom · 1 bed · 1 shared bathrooms · Wifi · Washing Machine",
+    "star": 4.23,
+    "price": "$75 / night",
+    "long": 16.377140,
+    "lat":48.215580
+}, {
+    "img": "https://images.unsplash.com/photo-1600566753104-685f4f24cb4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1571992579655-8134e2b8df0b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Center of Vienna",
+    "title": "5 Star Luxury Apartment",
+    "description": "2 guest · 1 bedroom · 1 bed · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 3.85,
+    "price": "$80 / night",
+    "long": 16.373281,
+    "lat": 48.204793
+}]

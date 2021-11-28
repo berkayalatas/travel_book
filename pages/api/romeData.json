@@ -1,0 +1,71 @@
+[{
+    "img": "https://images.unsplash.com/flagged/photo-1573168711259-df303b431d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2" : "https://images.unsplash.com/photo-1497074367201-25b8d28279e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+    "location": "Luxury studio flat in Piazza Navona",
+    "title": "Super cool balcony and city view",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.7,
+    "price": "$40 / night",
+    "long": 12.480022,
+    "lat": 41.894956
+}, {
+    "img": "https://images.unsplash.com/photo-1494203484021-3c454daf695d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1506664453913-f326aa81f54d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "location": "Private room in center of Rome",
+    "title": "Independent luxury studio apartment",
+    "description": "2 guest · 2 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen",
+    "star": 4.3,
+    "price": "$35 / night",
+    "long": 12.479476,
+    "lat": 41.891736
+}, {
+    "img": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1485819196298-11222a657b31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "location": "Single and chick room in center of Rome",
+    "title": "Rome, Italy - Studio Apartment",
+    "description": "1 guest · 2 bedroom · 4 bed · 2 bathrooms · No parking · Washing Machine",
+    "star": 3.9,
+    "price": "$40 / night",
+    "long": 12.487549,
+    "lat": 41.887327
+}, {
+    "img": "https://images.unsplash.com/photo-1600493505500-afac3fc363e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "img2": "https://images.unsplash.com/photo-1482867899247-e295efdd8c1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Amzing view flat",
+    "title": "10 mins to metro station, Italy Rome",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · No parking · Washing Machine",
+    "star": 4.1,
+    "price": "$80 / night",
+    "long": 12.469728,
+    "lat":41.888413
+}, {
+    "img": "https://images.unsplash.com/photo-1612366268272-325e246c2843?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "img2": "https://images.unsplash.com/photo-1603801705797-4f10cd71f49f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Great and cozy room and quiet Apartment",
+    "title": "Spacious Peaceful Modern Bedroom",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Free parking · Dry Cleaning",
+    "star": 5.0,
+    "price": "$30 / night",
+    "long": 12.492917,
+    "lat": 41.895665
+}, {
+    "img": "https://images.unsplash.com/photo-1546555802-01af0341ec23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1197&q=80",
+    "img2": "https://images.unsplash.com/photo-1597962261938-8714a29fa42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Clean, Quiet and lovely room",
+    "title": "The Perfect Room In Rome",
+    "description": "2 guest · 2 bedroom · 1 bed · 1 shared bathrooms · Wifi · Washing Machine",
+    "star": 4.2,
+    "price": "$75 / night",
+    "long": 12.496610,
+    "lat":41.886943
+}, {
+    "img": "https://images.unsplash.com/photo-1579518919756-df28bdaaeab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1154&q=80",
+    "location": "Center of Rome",
+    "title": "5 Star Luxury Apartment",
+    "description": "2 guest · 1 bedroom · 2 bed · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.8,
+    "price": "$80 / night",
+    "long": 12.490899,
+    "lat": 41.891927
+}]

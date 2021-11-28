@@ -5,7 +5,6 @@ import MapCard from "./MapCard";
 
 function Map({ searchResults }) {
   const [selectedPin, setSelectedPin] = React.useState({});
-
   // Transform the search resuls object into the
   // { latitude: 51.5103, longitude: 7.49347 },
 

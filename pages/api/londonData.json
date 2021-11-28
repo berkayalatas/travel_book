@@ -1,0 +1,71 @@
+[{
+    "img": "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+    "img2" : "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+    "location": "Brand new studio flat",
+    "title": "Stay at this spacious Edwardian House",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.73,
+    "price": "$30 / night",
+    "long": -0.0022275,
+    "lat": 51.5421655
+}, {
+    "img": "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Private room in center of London",
+    "title": "Independent luxury studio apartment",
+    "description": "2 guest · 3 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen",
+    "star": 4.3,
+    "price": "$40 / night",
+    "long": -0.095091,
+    "lat": 51.48695
+}, {
+    "img": "https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+    "img2": "https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Single center of London",
+    "title": "London Studio Apartment",
+    "description": "4 guest · 4 bedroom · 4 bed · 2 bathrooms · Free parking · Washing Machine",
+    "star": 3.9,
+    "price": "$35 / night",
+    "long": -0.135638,
+    "lat": 51.521916
+}, {
+    "img": "https://images.unsplash.com/photo-1560448205-4d9b3e6bb6db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1588865768606-430caafbe707?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Dream view flat",
+    "title": "30 mins to Oxford Street, Excel London",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 4.1,
+    "price": "$55 / night",
+    "long": -0.069961,
+    "lat": 51.472618
+}, {
+    "img": "https://images.unsplash.com/photo-1547166812-0fca6370dc03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "img2": "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+    "location": "Great and cozy room",
+    "title": "Spacious Peaceful Modern Bedroom",
+    "description": "3 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Free parking · Dry Cleaning",
+    "star": 5.0,
+    "price": "$60 / night",
+    "long": -0.08472,
+    "lat": 51.510794
+}, {
+    "img": "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1109&q=80",
+    "img2": "https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+    "location": "Clean, Quiet and lovely room",
+    "title": "The Perfect Room In London",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Washing Machine",
+    "star": 4.23,
+    "price": "$65 / night",
+    "long": -0.094116,
+    "lat": 51.51401
+}, {
+    "img": "https://images.unsplash.com/photo-1551105378-78e609e1d468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    "img2": "https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "location": "Center of London",
+    "title": "5 Star Luxury Apartment",
+    "description": "3 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wifi · Kitchen · Free parking · Washing Machine",
+    "star": 3.85,
+    "price": "$90 / night",
+    "long": -0.109889,
+    "lat": 51.521245
+}]
