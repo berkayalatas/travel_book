@@ -7,7 +7,7 @@ function Footer() {
         className="container flex flex-wrap items-center justify-center px-4 py-6 mx-auto 
        md:justify-evenly"
       >
-        <div className="flex flex-wrap justify-center mx-5 lg:font-semibold lg:text-lg text-red-500">
+        <div className="flex flex-wrap justify-center mx-5 lg:text-lg text-red-500">
           <div className="flex items-center space-x-8 lg:space-x-20">
             <Link href="/">Home</Link>
             <Link href="/">About</Link>
@@ -55,24 +55,16 @@ function Footer() {
         <hr className="border-gray-400 w-3/5" />
       </div>
       <div className="flex justify-center align-center text-center mb-3">
-        <p className="text-md text-red-500 font-bold mb-2">
+        <p className="text-md text-red-500 font-semibold mb-2">
           Copyright © 2021 by{" "}
           <a className="text-blue-400" href="mailto:berkay.3304@gmail.com">
             Berkay Alatas
-          </a>
+          </a>{" "}
           . All Rights Reserved.
         </p>{" "}
       </div>
     </footer>
   );
-}
-
-{
-  /* <p className="text-sm text-blue-700 font-bold mb-2">
-Copyright © 2021 by{" "}
-<a className="text-red-500" href="mailto:berkay.3304@gmail.com">Berkay Alatas</a>. All
-Rights Reserved.
-</p> */
 }
 
 export default Footer;

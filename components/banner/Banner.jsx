@@ -11,7 +11,7 @@ function Banner() {
         <div className="flex justify-center">
           <div
             className="bg-white bg-opacity-50 w-3/6 mb-4 border 
-            border-black py-4 rounded-lg"
+            border-black py-4 rounded-lg p-2"
           >
             <h2 className="text-md md:text-lg lg:text-4xl text-black font-semibold">
               Welcome to the World of Travelers
