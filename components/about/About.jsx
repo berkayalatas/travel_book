@@ -1,8 +1,8 @@
-import Image from "next/image";
+//import Image from "next/image";
 
 function About() {
   return (
-    <section className="border-b py-8">
+    <section className="border-b py-2">
       <div className="container max-w-5xl mx-auto m-8">
         <h2 className="w-full my-2 text-4xl lg:text-5xl font-black leading-tight text-center text-gray-800">
           About
@@ -13,14 +13,13 @@ function About() {
 
         <div className="flex flex-wrap">
           <div className="w-5/6 sm:w-1/2 p-6">
-            <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-              Lorem ipsum dolor sit amet
+            <h3 className="text-3xl text-center text-gray-800 font-bold leading-none mb-3">
+              Book your room and take the road
             </h3>
             <p className="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.
+              We are only available in London, Berlin, Vienna, Paris, Rome and
+              Amsterdam. We will be available in more cities soon.
               <br />
- 
             </p>
           </div>
           <div className="w-full sm:w-1/2 p-6">
@@ -459,13 +458,13 @@ function About() {
           <div className="w-full sm:w-1/2 p-6 mt-6">
             <div className="align-middle">
               <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Lorem ipsum dolor sit amet
+                Connect to the world
               </h3>
               <p className="text-gray-600 mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                at ipsum eu nunc commodo posuere et sit amet ligula.
+                Our goal is to offer suitable rooms to travelers and make them
+                stay connected.Travelers will be able to communicate with each
+                other and find a host.
                 <br />
- 
               </p>
             </div>
           </div>

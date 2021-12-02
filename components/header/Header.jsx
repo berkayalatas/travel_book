@@ -42,6 +42,7 @@ function Header({ placeholder }) {
   async function handleLogout() {
     try {
       await logout();
+      router.push("/");
     } catch (err) {
       console.log(err);
     }
@@ -133,17 +134,65 @@ function Header({ placeholder }) {
             {currentUser ? (
               <div className="p-1">
                 <Link className="navItem" href="/auth/UserDashboard">
-                  <div className="navItem">User Dashboard</div>
+                  <div className="navItem flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    User Dashboard
+                  </div>
                 </Link>
 
                 <Link href="/auth/UpdateProfile">
-                  <div className="navItem">Update Profile</div>
+                  <div className="navItem flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                      />
+                    </svg>{" "}
+                    Update Profile
+                  </div>
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+                  className="text-gray-700 block w-full text-sm hover:bg-gray-100"
                 >
-                  <div>Sign out</div>
+                  <div className="navItem flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                      />
+                    </svg>
+                    Sign out
+                  </div>
                 </button>
               </div>
             ) : (

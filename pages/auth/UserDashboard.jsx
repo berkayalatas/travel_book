@@ -16,6 +16,7 @@ function UserDashboard() {
     setError("");
     try {
       await logout();
+      router.push("/");
     } catch (err) {
       setError("Failed to log out");
       console.log(err);
@@ -36,15 +37,15 @@ function UserDashboard() {
             </h2>
             <div className="mt-8">
               <div className="flex m-2 p-2 justify-center align-middle">
-                <div className="flex-col text-center">
+                <div className="flex-col text-center justify-center align-middle ">
                   <img
                     className="inline object-cover w-16 h-16 mr-2 rounded-full"
                     src="https://img.icons8.com/color/48/000000/passenger-with-baggage.png"
                     alt="Profile image"
                   />
                   <h3
-                    className="text-center text-2xl mt-3 text-gray-600 font-display font-semibold lg:text-left xl:text-4xl
-                    xl:text-bold"
+                    className="text-center font-semibold text-xl mt-3 text-gray-600 font-display xl:text-2xl
+                    xl:text-semibold"
                   >
                     Welcome {currentUser.displayName || currentUser.email}{" "}
                   </h3>

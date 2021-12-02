@@ -5,8 +5,7 @@ import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import HotelCard from "../components/hotelCard/HotelCard";
 import Map from "../components/map/Map";
-import Router from "next/dist/server/router";
-
+ 
 function Search({ searchResults }) {
   const router = useRouter();
 
@@ -15,7 +14,6 @@ function Search({ searchResults }) {
   const formattedStartDate = format(new Date(startDate), "dd-MM-yyyy");
   const formattedEndDate = format(new Date(endDate), "dd-MM-yyyy");
   const range = `from ${formattedStartDate} - to ${formattedEndDate}`;
-  const [indexNumberOfCity, setIndexNumberOfCity] = useState(0);
 
   // useEffect(() => {
   //   if (location.toLowerCase() === "london") {
@@ -39,7 +37,7 @@ function Search({ searchResults }) {
       indexNumber = item.id;
     }
   });
- 
+  
   return (
     <div>
       <Header
@@ -65,15 +63,22 @@ function Search({ searchResults }) {
           </div>
           <div className="flex flex-col">
             {searchResults[indexNumber].rooms.map(
-              ({ img, location, title, description, star, price }, key) => (
+              (
+                { img, location, title, description, star, price, roomID },
+                key
+              ) => (
                 <HotelCard
-                  key={key}
+                  key={key}                  
                   img={img}
                   location={location}
                   title={title}
                   description={description}
                   star={star}
-                  price={price}
+                  price={price}                  
+                  startDate = {startDate}
+                  endDate = {endDate}
+                  numberOfGuest = {numberOfGuest}
+                  roomID={roomID}                
                 />
               )
             )}
@@ -95,10 +100,10 @@ export default Search;
 //https://jsonkeeper.com/b/DAC0 //paris
 //https://jsonkeeper.com/b/XSDC //rome
 //https://jsonkeeper.com/b/R9UK //amsterdam
-//https://jsonkeeper.com/b/GNBK //city urls
+//https://jsonkeeper.com/b/UGM8 //city urls
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/TR2M").then(
+  const searchResults = await fetch("https://jsonkeeper.com/b/UGM8").then(
     (response) => response.json()
   );
 

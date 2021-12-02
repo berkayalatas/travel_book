@@ -11,8 +11,7 @@ function Footer() {
           <div className="flex items-center space-x-8 lg:space-x-20">
             <Link href="/">Home</Link>
             <Link href="/">About</Link>
-            <Link href="/">Contact</Link>
-            <Link href="/">Terms</Link>
+            <Link href="/contactUs">Contact</Link>
           </div>
         </div>
         <div className="flex justify-center mt-4 lg:mt-0">

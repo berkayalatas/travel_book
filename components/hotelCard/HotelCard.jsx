@@ -2,14 +2,51 @@ import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
 import React from "react";
+import { useRouter } from "next/dist/client/router";
 
-function HotelCard({ img, location, title, description, star, price }) {
-  
+function HotelCard({
+  img,
+  location,
+  title,
+  description,
+  star,
+  price,
+  startDate,
+  endDate,
+  numberOfGuest,
+  roomID,
+}) {
   const [toggleHeart, setToggleHeart] = React.useState(true);
+  const router = useRouter();
+
   return (
     <div
       className="flex flex-col md:flex-row pt-4 pb-7 px-2 pr-4 border-b cursor-pointer 
       hover:opacity-90 hover:shadow-lg transition duration-200 ease-out first:border-t"
+      onClick={() => {
+        console.log( img,
+          location,
+          title,
+          description,
+          star,
+          price,
+          startDate,
+          endDate,
+          numberOfGuest,
+          roomID,);
+        router.query.RoomID = roomID;
+        router.push({
+          pathname: "/checkOut",
+          query: {
+            location: location,
+            startDate: startDate,
+            endDate: endDate,
+            numberOfGuest: numberOfGuest,
+            roomID: roomID,
+          },
+        });
+        //router.push("/checkOut");
+      }}
     >
       <div className="relative h-64 w-full object-contain md:h-52 md:w-80 flex-shrink-0">
         <Image

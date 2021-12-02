@@ -1,8 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
-import { useAuth, currentUser } from "../../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 import Header from "../../components/header/Header";
 import SvgComp from "../../components/svg/SvgComp";
+import { db } from "../../firebase_config";
 
 function SignUpPage() {
   const router = useRouter();
@@ -10,9 +11,11 @@ function SignUpPage() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup, signUpErrMsg } = useAuth();
+  const { signup, signUpErrMsg, user, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
 
   // const [state, setState] = React.useState({
   //   fullname: "",
@@ -39,7 +42,6 @@ function SignUpPage() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      router.push("/");
     } catch {
       setError("Failed to create an account");
     }
@@ -91,6 +93,8 @@ function SignUpPage() {
                     placeholder="example@gmail.com*"
                     ref={emailRef}
                     required
+                    value={userEmail}
+                    onChange={(event) => setUserEmail(event.target.value)}
                   />
                 </div>
                 <div className="mt-8">
@@ -107,6 +111,8 @@ function SignUpPage() {
                     required
                     minLength="6"
                     maxLength="20"
+                    value={userPassword}
+                    onChange={(event) => setUserPassword(event.target.value)}
                   />
                 </div>
                 <div className="mt-8">

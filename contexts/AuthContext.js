@@ -7,7 +7,9 @@ import {
   sendPasswordResetEmail
 } from "firebase/auth";
 import { auth } from "../firebase_config";
+import { db } from "../firebase_config";
 import { updatePassword , updateEmail, updateProfile  } from "firebase/auth";
+import { useRouter } from "next/dist/client/router";
 
 const AuthContext = React.createContext('')
 
@@ -22,13 +24,29 @@ export function AuthProvider({ children }) {
   var [loginErrMsg , setLoginErrMsg] = useState('');
   var [signUpErrMsg, setSignUpErrMsg] = useState('');
   var [updateUsernameErrMsg, setUpdateUsernameErrMsg] = useState('');
-
+  const router = useRouter();
   function signup(email, password) {
  
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+      if(user){
+        router.push('/auth/UserDashboard');
+        db.collection("users")
+        .add({
+          userID: user.uid,
+          userEmail: email,
+          userPassword: password,
+        })
+        .then(() => {
+          // setUserEmail("");
+          // setUserPassword("");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      }
       // ...
     })
     .catch((error) => {
@@ -44,7 +62,7 @@ export function AuthProvider({ children }) {
       password
     ).then((userCredential) => {
       // Signed in 
-      const user = userCredential.user;
+      const user = userCredential.user;      
       console.log(user);         
     })
     .catch((error) => {
