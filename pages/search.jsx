@@ -108,10 +108,10 @@ export default Search;
 //https://jsonkeeper.com/b/DAC0 //paris
 //https://jsonkeeper.com/b/XSDC //rome
 //https://jsonkeeper.com/b/R9UK //amsterdam
-//https://jsonkeeper.com/b/84NS //city urls
+//https://jsonkeeper.com/b/1Y8L //city urls
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/84NS").then(
+  const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
     (response) => response.json()
   );
 

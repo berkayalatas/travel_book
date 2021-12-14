@@ -9,8 +9,9 @@ import {
 import Header from "../components/header/Header";
 import { format } from "date-fns";
 import RoomMap from "../components/map/RoomMap";
-import { useAuth } from "../contexts/AuthContext"
-import { db } from '../firebase_config'
+import { useAuth } from "../contexts/AuthContext";
+import { db } from "../firebase_config";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -23,7 +24,8 @@ function checkOut({ searchResults }) {
   const formattedEndDate = format(new Date(endDate), "dd-MM-yyyy");
 
   // To calculate the time difference of two dates
-  var differenceInTime = new Date(endDate).getTime() - new Date(startDate).getTime();
+  var differenceInTime =
+    new Date(endDate).getTime() - new Date(startDate).getTime();
   // To calculate the no. of days between two dates
   var numberOfDay = differenceInTime / (1000 * 3600 * 24);
   const { user, currentUser } = useAuth();
@@ -54,51 +56,48 @@ function checkOut({ searchResults }) {
   var dailyPrice = roomObj.roomPrice.match(/\d/g);
   //multiplication with number of date and calculate total price
   var totalPrice = numberOfDay * dailyPrice.join("");
-  
+
   const handleBooking = () => {
-    if(currentUser){
+    if (currentUser) {
       //router.push('/auth/UserDashboard');
       db.collection("booking")
-      .add({
-        user: {
-          userID: user.uid,
-          userEmail: user.email, 
-        },
-        city: {
-          id:id,
-          city:searchResults[id].city,
-        },
-        reservationDetails: {
-          startDate:startDate, 
-          endDate:endDate, 
-          numberOfGuest:numberOfGuest,
-        },
-        room: {
-          roomID: roomID,
-          roomTitle: roomObj.roomTitle,
-          roomDescription: roomObj.roomDescription,
-          roomLocation: roomObj.roomLocation,
-          roomDescription: roomObj.roomDescription,
-          roomLat: roomObj.roomLat,
-          roomLong: roomObj.roomLong,
-          roomStar: roomObj.roomStar,
-          roomDailyPrice: roomObj.roomPrice,
-          totalRoomPrice: totalPrice + 10 , // 10$ is default cleaning fee
-        }  
-
-      })
-      .then(() => {
-        // setUserEmail("");
-        // setUserPassword("");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-    }else{
-      alert("Hello\nHow are you?"); 
+        .add({
+          user: {
+            userID: user.uid,
+            userEmail: user.email,
+          },
+          city: {
+            id: id,
+            city: searchResults[id].city,
+          },
+          reservationDetails: {
+            startDate: startDate,
+            endDate: endDate,
+            numberOfGuest: numberOfGuest,
+          },
+          room: {
+            roomID: roomID,
+            roomTitle: roomObj.roomTitle,
+            roomImg: roomObj.roomImg,
+            roomDescription: roomObj.roomDescription,
+            roomLocation: roomObj.roomLocation,
+            roomDescription: roomObj.roomDescription,
+            roomLat: roomObj.roomLat,
+            roomLong: roomObj.roomLong,
+            roomStar: roomObj.roomStar,
+            roomDailyPrice: roomObj.roomPrice,
+            totalRoomPrice: totalPrice + 10, // 10$ is default cleaning fee
+          },
+        })
+        .then()
+        .catch((error) => {
+          console.error(error);
+        });
+    } else {
+      router.push('/auth/SignUpPage');
     }
-  }
- 
+  };
+
   return (
     <div>
       {/*{`${id} {`${location}, ${startDate}, ${endDate}, ${numberOfGuest}, ${roomID}`} */}
@@ -142,8 +141,8 @@ function checkOut({ searchResults }) {
             lg:pb-12 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-6"
           >
             <div
-              className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8 text-center text-2xl sm:text-3xl 
-                sm:font-extrabold font-bold"
+              className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8 text-center text-2xl 
+              sm:text-3xl sm:font-extrabold mb-3 font-bold"
             >
               <h1 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
                 {roomObj.roomLocation}
@@ -156,6 +155,11 @@ function checkOut({ searchResults }) {
                 justify-evenly lg:mt-0 lg:row-span-3 rounded-lg shadow-lg"
             >
               <div>
+                <div className="mt-3 flex justify-center mb-5 ">
+                  <p className="text-xl underline font-semibold text-red-500">
+                    Room Details
+                  </p>
+                </div>
                 <div className="flex justify-center mb-6">
                   <p className="text-3xl text-gray-900">{roomObj.roomPrice}</p>
                 </div>
@@ -186,7 +190,7 @@ function checkOut({ searchResults }) {
               </div>
 
               <div className="flex flex-col justify-center">
-                <div className="mt-3 flex justify-center my-2">
+                <div className="mt-3 flex justify-center mb-3">
                   <p className="text-xl underline font-semibold text-red-500">
                     Booking Details
                   </p>
@@ -215,6 +219,9 @@ function checkOut({ searchResults }) {
 
                 <div className="mt-3 flex justify-center my-2">
                   <p className="text-xl text-gray-900">{`Number of Guest: ${numberOfGuest}`}</p>
+                </div>
+                <div className="mt-3 flex justify-center my-2">
+                  <p className="text-xl text-gray-900">{`Number of Day: ${numberOfDay}`}</p>
                 </div>
               </div>
 
@@ -254,7 +261,7 @@ function checkOut({ searchResults }) {
                       totalPrice + 10
                     }$`}</p>
                   </div>
-                  <div className="mt-5 flex justify-center">
+                  <div className="my-5 flex justify-center">
                     <button
                       onClick={handleBooking}
                       className="w-5/6 bg-red-500 border border-transparent 
@@ -278,34 +285,34 @@ function checkOut({ searchResults }) {
                 <div className="mt-4 flex flex-col justify-start ">
                   <div className="flex my-3">
                     <HomeIcon className="h-7 w-7 mr-3" />
-                    <p className="text-lg ">
+                    <div className="text-lg ">
                       {" "}
                       {roomObj.apartment}
                       <p className="text-gray-600 text-sm">
                         {" "}
                         You'll have the apartment to yourself.{" "}
                       </p>
-                    </p>
+                    </div>
                   </div>
                   <div className="flex my-3">
                     <ShieldCheckIcon className="h-7 w-7 mr-3" />
-                    <p className="text-lg ">
+                    <div className="text-lg ">
                       {roomObj.roomCheckIn}
                       <p className="text-gray-600 text-sm">
                         Check yourself in with the lockbox.
                       </p>
-                    </p>
+                    </div>
                   </div>
                   <div className="flex my-3">
                     <EmojiHappyIcon className="h-7 w-7 mr-3" />
-                    <p className="text-lg">
+                    <div className="text-lg">
                       {roomObj.pet}
                       <p className="text-gray-600 text-sm">
                         {roomObj.pet.indexOf("not") > 0
                           ? "Pets are not allowed in this house."
                           : "All kind of pets are allowed."}
                       </p>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -328,7 +335,7 @@ function checkOut({ searchResults }) {
               className="flex justify-center align-middle 
                 lg:min-w-[600px] lg:min-h-[400px]"
             >
-              <RoomMap long={roomObj.roomLong} lat={roomObj.roomLat} />
+             <RoomMap long={roomObj.roomLong} lat={roomObj.roomLat} /> 
             </div>
           </div>
         </div>
@@ -340,7 +347,7 @@ function checkOut({ searchResults }) {
 export default checkOut;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/84NS").then(
+  const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
     (response) => response.json()
   );
 

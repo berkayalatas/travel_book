@@ -13,13 +13,30 @@ import vienna from "../public/images/locations/vienna.jpg";
 import rome from "../public/images/locations/rome.jpg";
 import paris from "../public/images/locations/paris.jpg";
 
-export default function Home({ citiesData, cardsData }) {
+export default function Home({ citiesData, cardsData, searchResults }) {
   const ref = React.useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
   const imgArr = [london, berlin, vienna, paris, rome, amsterdam];
-  //console.log(citiesData, cardsData);
+
+  var bestRoomsArr = [];
+  for (let i = 0; i < searchResults.length; i++) {
+    for (let j = 0; j < searchResults[i].rooms.length; j++) {
+      if (searchResults[i].rooms[j].star == 5) {
+        let roomObj = {
+          id: searchResults[i].id,
+          img: searchResults[i].rooms[j].img,
+          roomID: searchResults[i].rooms[j].roomID,
+          location:searchResults[i].rooms[j].location,
+          city: searchResults[i].city,
+          title: searchResults[i].rooms[j].title,
+        };
+        bestRoomsArr.push(roomObj);
+      }
+    }
+  }
+  console.log(bestRoomsArr);
 
   return (
     <div>
@@ -56,7 +73,9 @@ export default function Home({ citiesData, cardsData }) {
         </section>
 
         <section>
-          <h2 className="w-full my-5 text-4xl lg:text-5xl font-black leading-tight text-center text-gray-800">Popular Rooms</h2>
+          <h2 className="w-full my-5 text-4xl lg:text-5xl font-black leading-tight text-center text-gray-800">
+            Popular Rooms
+          </h2>
           <div className="flex justify-evenly">
             <button
               className="cursor-pointer z-10 hover:shadow-lg"
@@ -101,8 +120,16 @@ export default function Home({ citiesData, cardsData }) {
               scrollBehavior: "smooth",
             }}
           >
-            {cardsData?.map((item, key) => (
-              <PopularRooms key={key} img={item.img} title={item.title} />
+            {bestRoomsArr?.map((item, key) => (
+              <PopularRooms
+                key={key}
+                id={item.id}
+                img={item.img}
+                city={item.city}
+                title={item.title}
+                roomID= {item.roomID}
+                location={item.location}
+              />
             ))}
           </div>
         </section>
@@ -122,10 +149,15 @@ export async function getStaticProps() {
     (response) => response.json()
   );
 
+  const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
+    (response) => response.json()
+  );
+
   return {
     props: {
       citiesData,
       cardsData,
+      searchResults,
     },
   };
 }
