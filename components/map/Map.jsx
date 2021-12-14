@@ -3,7 +3,7 @@ import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { getCenter } from "geolib";
 import MapCard from "./MapCard";
 
-function Map({ searchResults }) {
+function Map({ searchResults, startDate, endDate, numberOfGuest }) {
   const [selectedPin, setSelectedPin] = React.useState({});
   // Transform the search resuls object into the
   // { latitude: 51.5103, longitude: 7.49347 },
@@ -23,7 +23,7 @@ function Map({ searchResults }) {
     longitude: center?.longitude,
     zoom: 11,
   });
-
+  console.log(searchResults);
   return (
     <ReactMapGL
       mapStyle="mapbox://styles/berkayalatas/ckuvazm1c516819o374opqj99"
@@ -61,13 +61,16 @@ function Map({ searchResults }) {
               latitude={marker.lat}
               longitude={marker.long}
             >
-              <MapCard 
-                img= { marker.img }
+              <MapCard
+                img={marker.img}
                 location={marker.location}
                 title={marker.title}
                 description={marker.description}
                 price={marker.price}
-                
+                startDate={startDate}
+                endDate={endDate}
+                numberOfGuest={numberOfGuest}
+                roomID={marker.roomID}
               />
             </Popup>
           ) : (

@@ -1,6 +1,6 @@
  module.exports = {
     images: {
-       domains: ["localhost", 'source.unsplash.com', 'images.unsplash.com', 'img.icons8.com', 'icons8.com', 'links.papareact.com'],
+       domains: ["localhost", 'source.unsplash.com', 'images.unsplash.com', 'img.icons8.com', 'icons8.com', 'cdn-icons-png.flaticon.com', 'links.papareact.com'],
     },
     env: {
        mapbox_access_token: "pk.eyJ1IjoiYmVya2F5YWxhdGFzIiwiYSI6ImNrdWllN3oyaTAyaDYyeG1vYzh1eWczYmEifQ.AWmB4Q_-iG5CGZuyExH80g",

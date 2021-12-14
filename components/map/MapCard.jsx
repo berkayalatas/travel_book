@@ -1,21 +1,31 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/dist/client/router";
 
-function MapCard({ img, location, title, description, price }) {
+function MapCard({
+  img,
+  location,
+  title,
+  description,
+  price,
+  startDate,
+  endDate,
+  numberOfGuest,
+  roomID,
+}) {
+  const router = useRouter();
   return (
     <div
       className="bg-white rounded shadow-md flex card text-gray-900"
       style={{ height: "14rem", width: "25rem" }}
     >
-      <div
-        className="relative w-full"
-      >
+      <div className="relative w-full">
         <Image
           className="rounded-md"
           src={img}
           layout="fill"
           alt="Room Image"
-          objectFit= "fill"
+          objectFit="fill"
           objectPosition="left"
         />
       </div>
@@ -42,7 +52,22 @@ function MapCard({ img, location, title, description, price }) {
           style={{ transition: "all .2s ease-out" }}
           className="bg-grey-lighter p-3 flex items-center justify-between transition hover:bg-grey-light"
         >
-          <button className="rounded-lg px-2 py-1 bg-red-400 text-white hover:bg-red-500 duration-300">
+          <button
+            className="rounded-lg px-2 py-1 bg-red-400 text-white hover:bg-red-500 duration-300"
+            onClick={() => {
+              router.query.RoomID = roomID;
+              router.push({
+                pathname: "/checkOut",
+                query: {
+                  location: location,
+                  startDate: startDate,
+                  endDate: endDate,
+                  numberOfGuest: numberOfGuest,
+                  roomID: roomID,
+                },
+              });
+            }}
+          >
             Book Now
           </button>
         </div>

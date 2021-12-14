@@ -5,6 +5,7 @@ import React from "react";
 import { useRouter } from "next/dist/client/router";
 
 function HotelCard({
+  id,
   img,
   location,
   title,
@@ -21,34 +22,26 @@ function HotelCard({
 
   return (
     <div
-      className="flex flex-col md:flex-row pt-4 pb-7 px-2 pr-4 border-b cursor-pointer 
+      className="flex flex-col md:flex-row pt-4 pb-7 px-2 pr-4 border-b
       hover:opacity-90 hover:shadow-lg transition duration-200 ease-out first:border-t"
-      onClick={() => {
-        console.log( img,
-          location,
-          title,
-          description,
-          star,
-          price,
-          startDate,
-          endDate,
-          numberOfGuest,
-          roomID,);
-        router.query.RoomID = roomID;
-        router.push({
-          pathname: "/checkOut",
-          query: {
-            location: location,
-            startDate: startDate,
-            endDate: endDate,
-            numberOfGuest: numberOfGuest,
-            roomID: roomID,
-          },
-        });
-        //router.push("/checkOut");
-      }}
     >
-      <div className="relative h-64 w-full object-contain md:h-52 md:w-80 flex-shrink-0">
+      <div
+        className="relative h-64 w-full object-contain md:h-52 md:w-80 flex-shrink-0 cursor-pointer"
+        onClick={() => {
+          (router.query.id = id), (router.query.RoomID = roomID);
+          router.push({
+            pathname: "/checkOut",
+            query: {
+              id: id,
+              location: location,
+              startDate: startDate,
+              endDate: endDate,
+              numberOfGuest: numberOfGuest,
+              roomID: roomID,
+            },
+          });
+        }}
+      >
         <Image
           src={img}
           alt={title}
@@ -72,7 +65,25 @@ function HotelCard({
           />
         </div>
 
-        <h4 className="text-xl">{title}</h4>
+        <h4
+          className="text-xl cursor-pointer "
+          onClick={() => {
+            (router.query.id = id), (router.query.RoomID = roomID);
+            router.push({
+              pathname: "/checkOut",
+              query: {
+                id: id,
+                location: location,
+                startDate: startDate,
+                endDate: endDate,
+                numberOfGuest: numberOfGuest,
+                roomID: roomID,
+              },
+            });
+          }}
+        >
+          {title}
+        </h4>
 
         <div className="border-b w-10 p-2" />
 

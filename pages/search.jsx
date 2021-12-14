@@ -5,7 +5,7 @@ import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import HotelCard from "../components/hotelCard/HotelCard";
 import Map from "../components/map/Map";
- 
+
 function Search({ searchResults }) {
   const router = useRouter();
 
@@ -32,12 +32,14 @@ function Search({ searchResults }) {
   // }, []);
 
   var indexNumber;
+  var id;
   searchResults.filter((item) => {
     if (location.toLowerCase() === item.city) {
       indexNumber = item.id;
+      id = searchResults[indexNumber].id;
     }
   });
-  
+
   return (
     <div>
       <Header
@@ -64,28 +66,34 @@ function Search({ searchResults }) {
           <div className="flex flex-col">
             {searchResults[indexNumber].rooms.map(
               (
-                { img, location, title, description, star, price, roomID },
+                {img, location, title, description, star, price, roomID },
                 key
               ) => (
                 <HotelCard
-                  key={key}                  
+                  key={key}
+                  id={id}
                   img={img}
                   location={location}
                   title={title}
                   description={description}
                   star={star}
-                  price={price}                  
-                  startDate = {startDate}
-                  endDate = {endDate}
-                  numberOfGuest = {numberOfGuest}
-                  roomID={roomID}                
+                  price={price}
+                  startDate={startDate}
+                  endDate={endDate}
+                  numberOfGuest={numberOfGuest}
+                  roomID={roomID}
                 />
               )
             )}
           </div>
         </section>
         <section className="flex flex-wrap justify-center xl:min-w-[600px]">
-          <Map searchResults={searchResults[indexNumber].rooms} />
+          <Map
+            searchResults={searchResults[indexNumber].rooms}
+            startDate={startDate}
+            endDate={endDate}
+            numberOfGuest={numberOfGuest}
+          />
         </section>
       </main>
       <Footer />
@@ -100,10 +108,10 @@ export default Search;
 //https://jsonkeeper.com/b/DAC0 //paris
 //https://jsonkeeper.com/b/XSDC //rome
 //https://jsonkeeper.com/b/R9UK //amsterdam
-//https://jsonkeeper.com/b/UGM8 //city urls
+//https://jsonkeeper.com/b/84NS //city urls
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/UGM8").then(
+  const searchResults = await fetch("https://jsonkeeper.com/b/84NS").then(
     (response) => response.json()
   );
 

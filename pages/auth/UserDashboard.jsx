@@ -1,11 +1,12 @@
 import { useAuth } from "../../contexts/AuthContext";
 import PrivateRoute from "../PrivateRoute";
 import Link from "next/link";
-import { auth } from "../../firebase_config";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/dist/client/router";
 import Header from "../../components/header/Header";
-import SvgComp from "../../components/svg/SvgComp";
+import Image from "next/image";
+//import { auth } from "../../firebase_config";
+//import SvgComp from "../../components/svg/SvgComp";
 
 function UserDashboard() {
   const [error, setError] = useState("");
@@ -115,7 +116,13 @@ function UserDashboard() {
         </div>
         <div className="hidden lg:flex items-center justify-center bg-blue-100 flex-1 h-screen">
           <div className="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
-            <SvgComp />
+            {/* <SvgComp /> */}
+            <Image
+              src="https://cdn-icons-png.flaticon.com/512/2782/2782066.png"
+              width={380}
+              height={380}
+              alt="User Dashboard"
+            />
           </div>
         </div>
       </div>
