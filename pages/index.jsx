@@ -20,6 +20,7 @@ export default function Home({ citiesData, cardsData, searchResults }) {
   };
   const imgArr = [london, berlin, vienna, paris, rome, amsterdam];
 
+  /* Find 5 star rooms */
   var bestRoomsArr = [];
   for (let i = 0; i < searchResults.length; i++) {
     for (let j = 0; j < searchResults[i].rooms.length; j++) {
@@ -36,7 +37,6 @@ export default function Home({ citiesData, cardsData, searchResults }) {
       }
     }
   }
-  console.log(bestRoomsArr);
 
   return (
     <div>

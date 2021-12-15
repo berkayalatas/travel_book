@@ -3,7 +3,6 @@ import { useRouter } from "next/dist/client/router";
 import { useAuth } from "../../contexts/AuthContext";
 import Header from "../../components/header/Header";
 import SvgComp from "../../components/svg/SvgComp";
-import { db } from "../../firebase_config";
 
 function SignUpPage() {
   const router = useRouter();

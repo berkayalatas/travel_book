@@ -8,7 +8,7 @@ function PopularRooms({ id, img, city, title, roomID, location }) {
   return (
     <div className="pb-12">
       <div
-        className="relative h-80 w-96 cursor-pointer hover:scale-105
+        className="relative w-72 h-64 sm:h-80 sm:w-96 cursor-pointer hover:scale-105
         transform transition duration-300 ease-out"
         onClick={() => {
           router.query.id = id;

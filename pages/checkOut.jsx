@@ -10,7 +10,7 @@ import Header from "../components/header/Header";
 import { format } from "date-fns";
 import RoomMap from "../components/map/RoomMap";
 import { useAuth } from "../contexts/AuthContext";
-import { db } from "../firebase_config";
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -18,6 +18,8 @@ function classNames(...classes) {
 
 function checkOut({ searchResults }) {
   const router = useRouter();
+  const { user, currentUser } = useAuth();
+
   //ES6 Destructing
   const { id, startDate, endDate, numberOfGuest, roomID } = router.query;
   const formattedStartDate = format(new Date(startDate), "dd-MM-yyyy");
@@ -26,10 +28,11 @@ function checkOut({ searchResults }) {
   // To calculate the time difference of two dates
   var differenceInTime =
     new Date(endDate).getTime() - new Date(startDate).getTime();
+
   // To calculate the no. of days between two dates
   var numberOfDay = differenceInTime / (1000 * 3600 * 24);
-  const { user, currentUser } = useAuth();
 
+  //find Rooms in that city
   var roomObj;
   searchResults[id].rooms.map((room) => {
     // if (room.roomID === roomID){
@@ -53,54 +56,33 @@ function checkOut({ searchResults }) {
     // }
   });
 
-  var dailyPrice = roomObj.roomPrice.match(/\d/g);
+  var cloneRoomObj = {...roomObj};
+
+  var dailyPrice = cloneRoomObj.roomPrice.match(/\d/g);
+
   //multiplication with number of date and calculate total price
   var totalPrice = numberOfDay * dailyPrice.join("");
-
+ 
+  //save info in localStorage otherwise redirect to signup page
   const handleBooking = () => {
     if (currentUser) {
-      //router.push('/auth/UserDashboard');
-      db.collection("booking")
-        .add({
-          user: {
-            userID: user.uid,
-            userEmail: user.email,
-          },
-          city: {
-            id: id,
-            city: searchResults[id].city,
-          },
-          reservationDetails: {
-            startDate: startDate,
-            endDate: endDate,
-            numberOfGuest: numberOfGuest,
-          },
-          room: {
-            roomID: roomID,
-            roomTitle: roomObj.roomTitle,
-            roomImg: roomObj.roomImg,
-            roomDescription: roomObj.roomDescription,
-            roomLocation: roomObj.roomLocation,
-            roomDescription: roomObj.roomDescription,
-            roomLat: roomObj.roomLat,
-            roomLong: roomObj.roomLong,
-            roomStar: roomObj.roomStar,
-            roomDailyPrice: roomObj.roomPrice,
-            totalRoomPrice: totalPrice + 10, // 10$ is default cleaning fee
-          },
-        })
-        .then()
-        .catch((error) => {
-          console.error(error);
-        });
+      window.localStorage.setItem("booking", JSON.stringify(roomObj));
+      router.push({
+        pathname: "/payment",
+        query: {
+          city: searchResults[id].city,
+          startDate: startDate,
+          endDate: endDate,
+          numberOfGuest: numberOfGuest,
+        },
+      });
     } else {
-      router.push('/auth/SignUpPage');
+      router.push("/auth/SignUpPage");
     }
   };
 
   return (
     <div>
-      {/*{`${id} {`${location}, ${startDate}, ${endDate}, ${numberOfGuest}, ${roomID}`} */}
       <div className="bg-white">
         <div className="pt-1">
           <nav>
@@ -335,7 +317,7 @@ function checkOut({ searchResults }) {
               className="flex justify-center align-middle 
                 lg:min-w-[600px] lg:min-h-[400px]"
             >
-             <RoomMap long={roomObj.roomLong} lat={roomObj.roomLat} /> 
+              <RoomMap long={roomObj.roomLong} lat={roomObj.roomLat} />
             </div>
           </div>
         </div>
