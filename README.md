@@ -1,4 +1,4 @@
-## Travel Book |  Room Booking App
+## Travel Book |  Booking App
 -------------
 ### WEBSITE : https://travel-book.vercel.app
 
