@@ -15,22 +15,7 @@ function Search({ searchResults }) {
   const formattedEndDate = format(new Date(endDate), "dd-MM-yyyy");
   const range = `from ${formattedStartDate} - to ${formattedEndDate}`;
 
-  // useEffect(() => {
-  //   if (location.toLowerCase() === "london") {
-  //     setCityURL(london);
-  //   } else if (location.toLowerCase() === "berlin") {
-  //     setCityURL(berlin);
-  //   } else if (location.toLowerCase() === "vienna") {
-  //     setCityURL(vienna);
-  //   } else if (location.toLowerCase() === "paris") {
-  //     setCityURL(paris);
-  //   } else if (location.toLowerCase() === "rome") {
-  //     setCityURL(rome);
-  //   } else if (location.toLowerCase() === "amsterdam") {
-  //     setCityURL(amsterdam);
-  //   }
-  // }, []);
-
+  /* Find the rooms according to search results*/
   var indexNumber;
   var id;
   searchResults.filter((item) => {
@@ -40,6 +25,27 @@ function Search({ searchResults }) {
     }
   });
 
+  // /* convert price values to number */
+  // let copySearchResult = [...searchResults[indexNumber].rooms];
+  // let convertedSearchResult = [];
+  // copySearchResult.filter((rm) => {
+  //   convertedSearchResult.push(
+  //     Object.assign({}, rm, {
+  //       price: parseInt(rm.price.replace(/[^0-9]/g, "")),
+  //     })
+  //   );
+  // });
+
+  // /* Filtering according to star */
+  // const sortedStarResults = copySearchResult.sort(function (a, b) {
+  //   return b.star - a.star;
+  // });
+
+  // /* Filtering according to star */
+  // const sortedPriceResults = copySearchResult.sort(function (a, b) {
+  //   return a.star - b.star;
+  // });
+
   return (
     <div>
       <Header
@@ -48,25 +54,23 @@ function Search({ searchResults }) {
       <main className="flex flex-col xl:flex-row justify-center align-items-center gap-2  xl:min-h-[100vh]">
         <section className="flex-col xl:overflow-y-scroll xl:max-h-[100vh]">
           <p className="text-md m-3 pl-2 text-gray-900">
-            {location}, {range}, Stays for {numberOfGuest}{" "}
-            {numberOfGuest > 1 ? "Guests" : "Guest"}
+            {location.charAt(0).toUpperCase() + location.slice(1)}, {range},
+            Stays for {numberOfGuest} {numberOfGuest > 1 ? "Guests" : "Guest"}
           </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6 md:pl-5">
             Stays in {location.charAt(0).toUpperCase() + location.slice(1)}
           </h1>
           <div
-            className="hidden lg:inline-flex pl-2 mb-5 space-x-3 
-          text-gray-700 whitespace-nowrap"
+            className="flex pl-2 mb-5 space-x-3 
+          text-gray-700 whitespace-nowrap justify-evenly "
           >
-            <button className="button">Cancelation Flexibility</button>
-            <button className="button">Type of buttonlace</button>
-            <button className="button">price</button>
-            <button className="button">Rooms and Beds</button>
+            {/* <button className="button">Room Price</button>
+            <button className="button">Rooms Star</button> */}
           </div>
           <div className="flex flex-col">
             {searchResults[indexNumber].rooms.map(
               (
-                {img, location, title, description, star, price, roomID },
+                { img, location, title, description, star, price, roomID },
                 key
               ) => (
                 <HotelCard
@@ -89,7 +93,7 @@ function Search({ searchResults }) {
         </section>
         <section className="flex flex-wrap justify-center xl:min-w-[600px]">
           <Map
-            searchResults={searchResults[indexNumber].rooms}
+            searchResults={searchResults[indexNumber]}
             startDate={startDate}
             endDate={endDate}
             numberOfGuest={numberOfGuest}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/dist/client/router";
 
 function MapCard({
+  id,
   img,
   location,
   title,
@@ -55,10 +56,10 @@ function MapCard({
           <button
             className="rounded-lg px-2 py-1 bg-red-400 text-white hover:bg-red-500 duration-300"
             onClick={() => {
-              router.query.RoomID = roomID;
               router.push({
                 pathname: "/checkOut",
                 query: {
+                  id: id,
                   location: location,
                   startDate: startDate,
                   endDate: endDate,

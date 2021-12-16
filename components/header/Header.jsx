@@ -47,29 +47,34 @@ function Header({ placeholder }) {
       console.log(err);
     }
   }
-
   const search = () => {
     if (searchInput.length > 2 && searchInput.charAt(0) != " ") {
-      if (
-        searchInput.toLowerCase() === "london" ||
-        searchInput.toLowerCase() === "berlin" ||
-        searchInput.toLowerCase() === "vienna" ||
-        searchInput.toLowerCase() === "paris" ||
-        searchInput.toLowerCase() === "rome" ||
-        searchInput.toLowerCase() === "amsterdam"
-      ) {
-        router.push({
-          pathname: "/search",
-          query: {
-            location: searchInput,
-            startDate: startDate.toISOString(),
-            endDate: endDate.toISOString(),
-            numberOfGuest: numberOfGuest,
-          },
-        });
+      if (startDate && endDate >= new Date()) {       
+        if (
+          searchInput.toLowerCase() === "london" ||
+          searchInput.toLowerCase() === "berlin" ||
+          searchInput.toLowerCase() === "vienna" ||
+          searchInput.toLowerCase() === "paris" ||
+          searchInput.toLowerCase() === "rome" ||
+          searchInput.toLowerCase() === "amsterdam"
+        ) {
+          router.push({
+            pathname: "/search",
+            query: {
+              location: searchInput,
+              startDate: startDate.toISOString(),
+              endDate: endDate.toISOString(),
+              numberOfGuest: numberOfGuest,
+            },
+          });
+        } else {
+          router.push("/NotFound");
+        }
       } else {
-        router.push("/NotFound");
+        alert("Date must be greater than today's date");
       }
+    } else {
+      alert("Please enter a valid city");
     }
   };
 

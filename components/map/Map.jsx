@@ -8,7 +8,7 @@ function Map({ searchResults, startDate, endDate, numberOfGuest }) {
   // Transform the search resuls object into the
   // { latitude: 51.5103, longitude: 7.49347 },
 
-  const cordinates = searchResults.map((result) => ({
+  const cordinates = searchResults.rooms.map((result) => ({
     longitude: result.long,
     latitude: result.lat,
   }));
@@ -23,7 +23,6 @@ function Map({ searchResults, startDate, endDate, numberOfGuest }) {
     longitude: center?.longitude,
     zoom: 11,
   });
-  console.log(searchResults);
   return (
     <ReactMapGL
       mapStyle="mapbox://styles/berkayalatas/ckuvazm1c516819o374opqj99"
@@ -33,7 +32,7 @@ function Map({ searchResults, startDate, endDate, numberOfGuest }) {
         setViewport(nextViewport);
       }} // movement on the map
     >
-      {searchResults.map((marker, key) => (
+      {searchResults.rooms.map((marker, key) => (
         <div key={key}>
           <Marker
             longitude={marker.long}
@@ -62,6 +61,7 @@ function Map({ searchResults, startDate, endDate, numberOfGuest }) {
               longitude={marker.long}
             >
               <MapCard
+                id = {searchResults.id}
                 img={marker.img}
                 location={marker.location}
                 title={marker.title}
