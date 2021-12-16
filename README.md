@@ -1,30 +1,59 @@
-# Next.js + Tailwind CSS Example
+## Travel Book |  Room Booking App
+-------------
+### WEBSITE : https://travel-book.vercel.app
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+ 
+#### This app has : 
+- [x] User Authentication
+- [x] Search and List Rooms
+- [x] Mapbox integration
+- [x] Popular Rooms
+- [x] Book Room
+- [x] Contact Us 
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
-## Preview
+### Technologies
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Front-End | Back-End | Database
+------------ | ------------- | -------------
+React.js | Next.js | Firebase
+MapBox |        |
+geolib  |        |
+Tailwind CSS |   |
+Email.js |         | 
+react-map-gl |        | 
+formik  |       | 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![search_2](https://user-images.githubusercontent.com/59448862/146380405-4c60682a-a5f2-46a5-84cc-44c464be2923.jpg)
+![checkout](https://user-images.githubusercontent.com/59448862/146380410-20dcf937-fef4-4bf1-bc05-531024192180.jpg)
+![upcoming](https://user-images.githubusercontent.com/59448862/146380412-7c6ddf6a-f0e6-4f4a-8203-19ea81636f6f.PNG)
+![update profile](https://user-images.githubusercontent.com/59448862/146380413-c823ed2f-9728-4070-a296-da5f754d5f65.jpg)
+![contact_us](https://user-images.githubusercontent.com/59448862/146380416-dcc8315b-6063-438d-a5fb-e40d8bdc31de.jpg)
+![popular](https://user-images.githubusercontent.com/59448862/146380418-3add4b59-9a55-4693-87a0-845407f06d2f.jpg)
+![main_page](https://user-images.githubusercontent.com/59448862/146380419-99e9b43a-4515-42d4-9623-a6e9648f24fd.PNG)
+ 
+ 
+##  Installation and Setup Instructions
 
-## Deploy your own
+### Example:
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+### Installation:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+```npm install```
 
-## How to use
+#### To Run Test Suite:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+```npm test```
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+#### To Start Server:
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-# travel_book
+```npm run dev```
+
+#### To Visit App:
+
+```localhost:3000```
+
+
+
+ 
