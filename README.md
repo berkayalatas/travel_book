@@ -2,6 +2,7 @@
 -------------
 ### WEBSITE : https://travel-book.vercel.app
 
+#### This is a booking application for travelers. People can see and book rooms in cities. Map integration makes it easier to find rooms.
  
 #### This app has : 
 - [x] User Authentication
