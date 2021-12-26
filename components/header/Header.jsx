@@ -100,7 +100,6 @@ function Header({ placeholder }) {
           className="cursor-pointer"
           onClick={() => router.push("/")}
         />
-        {/* <img src="https://img.icons8.com/color/48/000000/palm-tree.png" />*/}
       </div>
 
       <div

@@ -13,12 +13,14 @@ import vienna from "../public/images/locations/vienna.jpg";
 import rome from "../public/images/locations/rome.jpg";
 import paris from "../public/images/locations/paris.jpg";
 
-export default function Home({ citiesData, cardsData, searchResults }) {
+export default function Home({ citiesData, example, searchResults }) {
   const ref = React.useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
   const imgArr = [london, berlin, vienna, paris, rome, amsterdam];
+
+  console.log(example)
 
   /* Find 5 star rooms */
   var bestRoomsArr = [];

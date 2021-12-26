@@ -60,8 +60,7 @@ function UserDashboard() {
     getInfo();
   }, []);
 
-
-/* Filter upcoming travels */
+  /* Filter upcoming travels */
   const upcomingTravelsArr = room.filter(
     (rm) =>
       new Date(
@@ -131,7 +130,7 @@ function UserDashboard() {
               </div>
             </div>
             <div className="flex flex-col mt-6 sm:mt-0 sm:ml-4">
-              <div className="text-lg font-bold text-gray-600 tracking-wide text-center">
+              <div className="text-lg font-bold text-gray-600 tracking-wide sm:text-center">
                 Email Address
               </div>
               <div className="flex flex-row text-center">
@@ -268,7 +267,8 @@ function UserDashboard() {
             </h3>
 
             {/* Filter previous travels filter expired travels */}
-            <div className="mt-2 flex flex-col sm:flex-row justify-center items-center">
+
+            <div className="mt-2 flex flex-col justify-evenly items-center">
               {previousTravelsArr.length > 0 ? (
                 previousTravelsArr
                   .filter(
