@@ -25,26 +25,50 @@ function Search({ searchResults }) {
     }
   });
 
-  // /* convert price values to number */
-  // let copySearchResult = [...searchResults[indexNumber].rooms];
-  // let convertedSearchResult = [];
-  // copySearchResult.filter((rm) => {
-  //   convertedSearchResult.push(
-  //     Object.assign({}, rm, {
-  //       price: parseInt(rm.price.replace(/[^0-9]/g, "")),
-  //     })
-  //   );
-  // });
+  const [filteredData, setFilteredData] = useState([
+    ...searchResults[indexNumber].rooms,
+  ]);
 
-  // /* Filtering according to star */
-  // const sortedStarResults = copySearchResult.sort(function (a, b) {
-  //   return b.star - a.star;
-  // });
+  /* convert price values to number */
+  let copySearchResult = [...searchResults[indexNumber].rooms];
+  let convertedSearchResult = [];
+  copySearchResult.filter((rm) => {
+    convertedSearchResult.push(
+      Object.assign({}, rm, {
+        price: parseInt(rm.price.replace(/[^0-9]/g, "")),
+      })
+    );
+  });
+  
+  /* Filtering according to star */
+  const sortedStarResults = copySearchResult.sort(
+    function (a, b) {
+      return b.star - a.star;
+    }
+  );
 
-  // /* Filtering according to star */
-  // const sortedPriceResults = copySearchResult.sort(function (a, b) {
-  //   return a.star - b.star;
-  // });
+  /* Filtering according to price */
+  const sortedPriceResults = convertedSearchResult.sort(function (a, b) {
+    return a.price - b.price;
+  });
+  
+  /* convert price values to string again Exp: $45 / night */
+  let reConvertedSearchResult = [];
+  [...sortedPriceResults].filter((rm) => {
+    reConvertedSearchResult.push(
+      Object.assign({}, rm, {
+        price: `$${rm.price} / night`
+      })
+    );
+  });
+
+  function displayFilteredPrice() {
+    setFilteredData(reConvertedSearchResult);
+  }
+
+  function displayFilteredStar() {
+    setFilteredData(sortedStarResults);
+  }
 
   return (
     <div>
@@ -64,11 +88,15 @@ function Search({ searchResults }) {
             className="flex pl-2 mb-5 space-x-3 
           text-gray-700 whitespace-nowrap justify-evenly "
           >
-            {/* <button className="button">Room Price</button>
-            <button className="button">Rooms Star</button> */}
+            <button className="button" onClick={displayFilteredPrice}>
+              Room Price
+            </button>
+            <button className="button" onClick={displayFilteredStar}>
+              Rooms Star
+            </button>
           </div>
           <div className="flex flex-col">
-            {searchResults[indexNumber].rooms.map(
+            {filteredData.map(
               (
                 { img, location, title, description, star, price, roomID },
                 key
