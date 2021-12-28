@@ -7,6 +7,7 @@
 #### This app has : 
 - [x] User Authentication
 - [x] Search and List Rooms
+- [x] Room Filtering 
 - [x] Mapbox integration
 - [x] Popular Rooms
 - [x] Book Room
