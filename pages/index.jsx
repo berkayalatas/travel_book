@@ -15,7 +15,6 @@ import paris from "../public/images/locations/paris.jpg";
 import cities from './api/cities.json';
 import searchResults from './api/cityData.json';
 
-
 export default function Home() {
   const ref = React.useRef(null);
   const scroll = (scrollOffset) => {
