@@ -12,15 +12,16 @@ import amsterdam from "../public/images/locations/amsterdam.jpg";
 import vienna from "../public/images/locations/vienna.jpg";
 import rome from "../public/images/locations/rome.jpg";
 import paris from "../public/images/locations/paris.jpg";
+import cities from './api/cities.json';
+import searchResults from './api/cityData.json';
 
-export default function Home({ citiesData, example, searchResults }) {
+
+export default function Home() {
   const ref = React.useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
   const imgArr = [london, berlin, vienna, paris, rome, amsterdam];
-
-  console.log(example)
 
   /* Find 5 star rooms */
   var bestRoomsArr = [];
@@ -63,7 +64,7 @@ export default function Home({ citiesData, example, searchResults }) {
             xl:grid-cols-3 mb-5"
           >
             {/* pull some data from server- API endpoint */}
-            {citiesData?.map((item, key) => (
+            {cities?.map((item, key) => (
               <LocationCards
                 key={key}
                 img={imgArr[key]}
@@ -142,24 +143,4 @@ export default function Home({ citiesData, example, searchResults }) {
   );
 }
 
-export async function getStaticProps() {
-  const citiesData = await fetch("https://jsonkeeper.com/b/4VF0").then(
-    (response) => response.json()
-  );
-
-  const cardsData = await fetch("https://jsonkeeper.com/b/VHHT").then(
-    (response) => response.json()
-  );
-
-  const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
-    (response) => response.json()
-  );
-
-  return {
-    props: {
-      citiesData,
-      cardsData,
-      searchResults,
-    },
-  };
-}
+ 

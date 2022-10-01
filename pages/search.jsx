@@ -5,8 +5,9 @@ import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import HotelCard from "../components/hotelCard/HotelCard";
 import Map from "../components/map/Map";
+import searchResults from './api/cityData.json';
 
-function Search({ searchResults }) {
+function Search() {
   const router = useRouter();
 
   //ES6 Destructing
@@ -18,10 +19,10 @@ function Search({ searchResults }) {
   /* Find the rooms according to search results*/
   var indexNumber;
   var id;
-  searchResults.filter((item) => {
+  searchResults?.filter((item) => {
     if (location.toLowerCase() === item.city) {
       indexNumber = item.id;
-      id = searchResults[indexNumber].id;
+      id = searchResults[indexNumber]?.id;
     }
   });
 
@@ -142,14 +143,14 @@ export default Search;
 //https://jsonkeeper.com/b/R9UK //amsterdam
 //https://jsonkeeper.com/b/1Y8L //city urls
 
-export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
-    (response) => response.json()
-  );
+// export async function getServerSideProps() {
+//   const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
+//     (response) => response.json()
+//   );
 
-  return {
-    props: {
-      searchResults,
-    },
-  };
-}
+//   return {
+//     props: {
+//       searchResults,
+//     },
+//   };
+// }

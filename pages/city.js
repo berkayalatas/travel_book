@@ -1,6 +1,7 @@
 import React from 'react'
+import cities from './api/cities.json'
 
-function city({cities}) {
+function city() {
   return (
     <div>
       {cities.map(city => <div>{city.url}</div>)}
@@ -11,14 +12,14 @@ function city({cities}) {
 export default city
 
 
-export async function getServerSideProps(){
-  const cities = await fetch("https://jsonkeeper.com/b/GNBK").then(
-    (response)=>response.json()
-  );
-  return{
-    props:{
-      cities
-    } 
+// export async function getServerSideProps(){
+//   const cities = await fetch("https://jsonkeeper.com/b/GNBK").then(
+//     (response)=>response.json()
+//   );
+//   return{
+//     props:{
+//       cities
+//     } 
     
-  }
-}
+//   }
+// }

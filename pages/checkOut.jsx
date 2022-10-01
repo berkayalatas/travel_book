@@ -8,20 +8,21 @@ import {
 } from "@heroicons/react/outline";
 import Header from "../components/header/Header";
 import { format } from "date-fns";
-import RoomMap from "../components/map/RoomMap";
 import { useAuth } from "../contexts/AuthContext";
-
+import RoomMap from "../components/map/RoomMap";
+import searchResults from './api/cityData.json'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function checkOut({ searchResults }) {
+function checkOut() {
   const router = useRouter();
   const { user, currentUser } = useAuth();
 
   //ES6 Destructing
   const { id, startDate, endDate, numberOfGuest, roomID } = router.query;
+  console.log(id, startDate, endDate, numberOfGuest, roomID)
   const formattedStartDate = format(new Date(startDate), "dd-MM-yyyy");
   const formattedEndDate = format(new Date(endDate), "dd-MM-yyyy");
 
@@ -34,7 +35,7 @@ function checkOut({ searchResults }) {
 
   //find Rooms in that city
   var roomObj;
-  searchResults[id].rooms.map((room) => {
+  searchResults[id]?.rooms.map((room) => {
     // if (room.roomID === roomID){
     if (room.roomID == roomID) {
       roomObj = {
@@ -328,14 +329,14 @@ function checkOut({ searchResults }) {
 
 export default checkOut;
 
-export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
-    (response) => response.json()
-  );
+// export async function getServerSideProps() {
+//   const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
+//     (response) => response.json()
+//   );
 
-  return {
-    props: {
-      searchResults,
-    },
-  };
-}
+//   return {
+//     props: {
+//       searchResults,
+//     },
+//   };
+// }
