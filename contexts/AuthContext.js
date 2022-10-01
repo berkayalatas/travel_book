@@ -110,13 +110,7 @@ export function AuthProvider({ children }) {
   }, [])
 
 
-
-  // // The user object has basic properties such as display name, email, etc.
-  // const displayName = user.displayName;
-  // const userEmail = user.email;
-  // const photoURL = user.photoURL;
-  // const emailVerified = user.emailVerified;
-  // const uid = user.uid;
+ 
 
   const values = {
     currentUser,

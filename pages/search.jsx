@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { useRouter } from "next/dist/client/router";
@@ -135,22 +135,4 @@ function Search() {
 }
 
 export default Search;
-//https://jsonkeeper.com/b/W7T1 //london
-//https://jsonkeeper.com/b/8VNV //berlin
-//https://jsonkeeper.com/b/9SPF //vienna
-//https://jsonkeeper.com/b/DAC0 //paris
-//https://jsonkeeper.com/b/XSDC //rome
-//https://jsonkeeper.com/b/R9UK //amsterdam
-//https://jsonkeeper.com/b/1Y8L //city urls
-
-// export async function getServerSideProps() {
-//   const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
-//     (response) => response.json()
-//   );
-
-//   return {
-//     props: {
-//       searchResults,
-//     },
-//   };
-// }
+ 

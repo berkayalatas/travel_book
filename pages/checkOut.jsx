@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/dist/client/router";
 import { StarIcon } from "@heroicons/react/solid";
 import {
@@ -328,15 +328,4 @@ function checkOut() {
 }
 
 export default checkOut;
-
-// export async function getServerSideProps() {
-//   const searchResults = await fetch("https://jsonkeeper.com/b/1Y8L").then(
-//     (response) => response.json()
-//   );
-
-//   return {
-//     props: {
-//       searchResults,
-//     },
-//   };
-// }
+ 
