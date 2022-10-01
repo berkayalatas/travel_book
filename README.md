@@ -7,6 +7,7 @@
 #### This app has : 
 - [x] User Authentication
 - [x] Search and List Rooms
+- [x] Room Filtering 
 - [x] Mapbox integration
 - [x] Popular Rooms
 - [x] Book Room
@@ -24,6 +25,7 @@ Tailwind CSS |   |
 Email.js |         | 
 react-map-gl |        | 
 formik  |       | 
+
 
 ![search_2](https://user-images.githubusercontent.com/59448862/146380405-4c60682a-a5f2-46a5-84cc-44c464be2923.jpg)
 ![checkout](https://user-images.githubusercontent.com/59448862/146380410-20dcf937-fef4-4bf1-bc05-531024192180.jpg)
